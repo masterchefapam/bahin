@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kinabuhi ug Ministeryo Workbook sa Tigom</title>
+   <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body class="glassy">
+
+    
+<div class="header">
+  <a href="https://www.jw.org">
+        <img class="logo" 
+src="https://www.jw.org/assets/ct/37b1eeb581/images/siteLogo-jworg-medium.svg"/>
+ 
+  </a>
+<h1>Kinabuhi ug Ministeryo Workbook sa Tigom</h1>
+</div>
+ 
+
+<div class="calendar-wrapper">
+  <button class="scroll-btn scroll-left" onclick="scrollCalendar(-1)">‹</button>
+  <div class="calendar-container card" id="calendar"></div>
+  <button class="scroll-btn scroll-right" onclick="scrollCalendar(1)">›</button>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal" id="eventModal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h3 id="modalDate" class="modaldate"></h3>
+    <div id="modalEvents"></div>
+  </div>
+</div>
+
+
+
+
+
+<script src="js/main.js"></script>
+</body>
+</html>

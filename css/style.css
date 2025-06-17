@@ -1,0 +1,268 @@
+  body {
+      font-family: Arial, sans-serif;
+   
+      display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      background-color: rgb(4, 4, 57);
+        padding: 0px;
+       margin: 0px;
+    }
+
+ #calendar {
+  padding:20px;
+ }
+ .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(6, 50, 116);
+  width: 100%;
+  margin-bottom: 33px;
+ }
+
+
+
+ .logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+ }
+
+    h1 {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: white;
+     
+    }
+
+    .calendar-wrapper {
+      position: relative;
+      max-width: 600px;
+    }
+
+    .scroll-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .scroll-left {
+      left: -20px;
+    }
+
+    .scroll-right {
+      right: -20px;
+    }
+
+    .calendar-container {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        gap: 10px;
+        padding: 10px;
+        border: 1px solid gray;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .week-card {
+      min-width: 200px;
+      flex-shrink: 0;
+      background: #0e4ca9;
+      border-radius: 8px;
+      padding: 10px;
+      box-shadow: 20px 20px 146px 10px rgb(210, 224, 232) inset;
+      text-align: center;
+      cursor: pointer;
+      background-color: #0e4ca9;
+    }
+
+  .week-card.current-week {
+
+  background: #ffeeba;
+  z-index: 1;
+  position: relative;
+}
+
+
+    .week-range {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .event {
+      background: #23184D;
+      color: white;
+      padding: 5px;
+      border-radius: 5px;
+      margin-top: 10px;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      justify-content: center;
+      box-shadow: 20px 20px 50px 10px rgb(82, 40, 113) inset;
+    }
+
+    .event img {
+      width: 30px;
+      height: 30px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .event span{
+        font-weight: bold;
+    }
+
+    .event span:hover {
+        color: rgb(241, 230, 147);
+        text-underline-position: below;
+    }
+
+  
+
+    button:hover{
+      background-color: maroon;
+    }
+
+    
+     .hero img {
+      object-fit: cover;
+      max-width: 50%;
+     }
+
+
+    /* Fullscreen modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 100;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .modal-content {
+      background-color: #25253a;
+      margin: 0;
+      padding: 20px;
+      height: 100%;
+      width: 100%;
+      border-radius: 0;
+      box-sizing: border-box;
+      overflow-y: auto;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+     
+    }
+
+    .modaldate {
+      background-color: rgb(52, 42, 165);
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 20px 20px 50px 10px rgb(70, 69, 112) inset;
+    }
+
+    h3 {
+        color: white;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 2rem;
+      cursor: pointer;
+      color: #ff0000;
+    }
+
+    #modalDate {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .modal-event {
+      display: flex;
+      align-items: center;
+      margin: 16px 0;
+      gap: 15px;
+      padding: 10px;
+      background: #25253a;
+      border-radius: 10px;
+      justify-content: center;
+
+    }
+
+    .modal-event img {
+      width: 40%;
+      height: 40%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 800px) {
+
+   
+      .scroll-btn {
+        display: none;
+      }
+
+       .week-card {
+    flex: 0 0 auto;
+    width: 95%;
+    max-width: 100%;
+  }
+
+       .modal-event img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+     .calendar-container {
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 80vh; /* Optional: limit height for scrolling area */
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+    }
+
+    @keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 10px 10px rgba(255, 193, 7, 0);
+  }
+}
+
+.calendar-container {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE/Edge */
+}
+
+.calendar-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
