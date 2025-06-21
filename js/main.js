@@ -16,9 +16,22 @@
       {title: "Click to view", image: "images/July7-July13.jpg" },
    
     ],
+    "2025-07-14": [
+      {title: "Regional Convention", image: "images/regional.jpg" },
+   
+    ],
+     
+     
   
     
   };
+
+  const regional ={
+    "Regional Convention Week": [
+      {title: "Regional Convention",image: "images/regional.png" },
+   
+    ]
+  }
 
   const todayStr = new Date().toISOString().split('T')[0];
 
@@ -50,7 +63,7 @@ function formatDateToMonthDay(dateStr) {
     const container = document.getElementById('calendar');
     for (let w = 1; w < numWeeks; w++) {
       const weekStart = new Date(startDate);
-      weekStart.setDate(weekStart.getDate() + w * 5);
+      weekStart.setDate(weekStart.getDate() + w * 6);
       const weekDates = getWeekRange(weekStart);
 
       const card = document.createElement('div');
@@ -90,6 +103,57 @@ function formatDateToMonthDay(dateStr) {
       if (!added) {
         const none = document.createElement('div');
         none.textContent = 'No events';
+        card.appendChild(none);
+      }
+
+      container.appendChild(card);
+    }
+  }
+
+    function generateRegional(startDate, numWeeks) {
+    const container = document.getElementById('calendar');
+    for (let w = 1; w < numWeeks; w++) {
+      const weekStart = new Date(startDate);
+      weekStart.setDate(weekStart.getDate() + w * 6);
+      const weekDates = getWeekRange(weekStart);
+
+      const card = document.createElement('div');
+      card.className = 'week-card';
+      card.onclick = () => showModalRegional(weekDates);
+
+      if (weekDates.includes(todayStr)) {
+        card.classList.add('current-week');
+      }
+
+      const weekRange = document.createElement('div');
+      weekRange.className = 'week-range';
+      weekRange.textContent = `${formatDateToMonthDay(weekDates[0])} – ${formatDateToMonthDay(weekDates[6])}`;
+
+      card.appendChild(weekRange);
+
+      let added = false;
+      weekDates.forEach(dateStr => {
+        (regional[dateStr] || []).forEach(event => {
+          const eventDiv = document.createElement('div');
+          eventDiv.className = 'event';
+
+          const img = document.createElement('img');
+          img.src = event.image;
+          img.alt = event.title;
+
+          const title = document.createElement('span');
+          title.textContent = event.title;
+
+          eventDiv.appendChild(img);
+          eventDiv.appendChild(title);
+          card.appendChild(eventDiv);
+          added = true;
+        });
+      });
+
+      if (!added) {
+        const none = document.createElement('div');
+        none.textContent = 'Regional Convention';
         card.appendChild(none);
       }
 
@@ -146,6 +210,9 @@ function formatDateToMonthDay(dateStr) {
     modal.style.display = 'block';
   }
 
+
+
+
   function closeModal() {
     document.getElementById('eventModal').style.display = 'none';
   }
@@ -163,6 +230,7 @@ function formatDateToMonthDay(dateStr) {
     }
   };
 
-  generateWeeks(new Date("2025-06-15"), 4);
-   generateWeeks(new Date("2025-07-07"), 2);
+  generateWeeks(new Date("2025-06-16"), 4);
+   generateWeeks(new Date("2025-07-07"), 3);
+ 
   scrollToCurrentWeek();
