@@ -307,7 +307,7 @@
 
 
 .coming {
-  color: red;
+  color: red !important;
   font-weight: bolder;
 }
 
