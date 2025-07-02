@@ -1,9 +1,6 @@
  const events = {
  
-     "2025-06-16": [
-      {title: "Click to view", image: "images/June16-22.jpg" },
-   
-    ],
+    
      "2025-06-23": [
       {title: "Click to view",image: "images/June23-29.jpg" },
    
@@ -18,6 +15,10 @@
     ],
     "2025-07-14": [
       {title: "Regional Convention", image: "images/regional.jpg" },
+   
+    ],
+      "2025-07-27": [
+      {title: "Click to view", image: "images/July21-27.jpg" },
    
     ],
      
@@ -230,7 +231,7 @@ function formatDateToMonthDay(dateStr) {
     }
   };
 
-  generateWeeks(new Date("2025-06-16"), 4);
-   generateWeeks(new Date("2025-07-07"), 3);
+  generateWeeks(new Date("2025-06-30"), 2);
+   generateWeeks(new Date("2025-07-07"), 4);
  
   scrollToCurrentWeek();
