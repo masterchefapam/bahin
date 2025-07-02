@@ -305,6 +305,13 @@
   z-index: 900;
 }
 
+
+.coming {
+  color: red;
+  font-weight: bolder;
+}
+
+
 .overlay.active {
   display: block;
 }
