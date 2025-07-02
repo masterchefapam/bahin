@@ -235,3 +235,10 @@ function formatDateToMonthDay(dateStr) {
    generateWeeks(new Date("2025-07-07"), 4);
  
   scrollToCurrentWeek();
+
+
+  function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('active');
+  document.querySelector('.overlay').classList.toggle('active');
+}
+

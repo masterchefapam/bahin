@@ -10,12 +10,23 @@
 
     
 <div class="header">
+ 
   <a href="https://www.jw.org">
         <img class="logo" 
 src="https://www.jw.org/assets/ct/37b1eeb581/images/siteLogo-jworg-medium.svg"/>
  
   </a>
 <h1>Kinabuhi ug Ministeryo Workbook sa Tigom</h1>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <nav id="mobileMenu" class="mobile-menu">
+    <ul>
+      <li><a href="#">Tagbo Sa Sangyaw</a></li>
+      <li><a href="#">News</a></li>
+      <li><a href="#">Cleaning Sked</a></li>
+    
+    </ul>
+  </nav>
 </div>
  
 
@@ -38,7 +49,9 @@ src="https://www.jw.org/assets/ct/37b1eeb581/images/siteLogo-jworg-medium.svg"/>
 
 
 
+ <div class="overlay" onclick="toggleMenu()"></div>
 
+ 
 
 <script src="js/main.js"></script>
 </body>
