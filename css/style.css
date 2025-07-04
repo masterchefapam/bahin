@@ -444,8 +444,11 @@ ul li:hover {
   color: rgb(36, 31, 31);
   text-decoration: underline;
   text-indent: 18px;
-  padding: 5px;
+  padding: 3px;
   font-weight: lighter;
+  background-color: rgb(243, 243, 207);
+  width: 60%;
+  border-radius: 5px;
 }
 
 .tues {
