@@ -445,7 +445,7 @@ ul li:hover {
   text-decoration: underline;
   text-indent: 18px;
   padding: 3px;
-  font-weight: lighter;
+  font-weight:bold;
   background-color: rgb(243, 243, 207);
   width: 60%;
   border-radius: 5px;
