@@ -18,7 +18,7 @@
 
 
   .content {
-   width: 95%;
+   max-width: 800px;
   margin: auto;
   }
  #calendar {
@@ -31,6 +31,7 @@
   background-color: rgb(6, 50, 116);
   width: 100%;
   margin-bottom: 33px;
+  position: relative;
  }
 
 
@@ -47,7 +48,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+ 
   right: 380px;
 
  }
@@ -266,9 +267,42 @@
     .mobile-menu {
       display: none;
     }
-    @media (max-width: 800px) {
 
 
+     /**/
+     /**/
+     /* */
+     /**/
+     /**/
+     /**/
+     /**/
+     /**/
+     /* */
+     /**/
+     /**/
+     /**/
+
+     @media(min-width: 601px){
+      .content {
+        padding: 30px;
+      }
+     }
+    
+    @media (max-width: 600px) {
+
+           /**/
+     /**/
+     /* */
+     /**/
+     /**/
+     /**/
+     /**/
+     /**/
+     /* */
+     /**/
+     /**/
+     /**/
+    
       /*
   Menu Toggle
 */
@@ -440,7 +474,7 @@ ul li:hover {
 }
 
 .daily {
-  font-size: 14px;
+  font-size: 10px;
   color: rgb(0, 0, 0);
   text-decoration: underline;
   text-indent: 18px;
@@ -508,6 +542,10 @@ background-color:#7F55B1;
   @media (max-width: 600px){
     .sangyaw {
       display: none;
+    }
+
+    .content {
+        width: 95%;
     }
   }
 
