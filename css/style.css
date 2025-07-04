@@ -440,8 +440,8 @@ ul li:hover {
 }
 
 .daily {
-  font-size: 12px;
-  color: rgb(36, 31, 31);
+  font-size: 14px;
+  color: rgb(0, 0, 0);
   text-decoration: underline;
   text-indent: 18px;
   padding: 3px;
