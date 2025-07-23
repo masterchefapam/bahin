@@ -1,26 +1,23 @@
  const events = {
  
     
-     "2025-06-23": [
-      {title: "Click to view",image: "images/June23-29.jpg" },
-   
-    ],
-     "2025-06-30": [
-      {title: "Click to view", image: "images/June30-July6.jpg" },
-   
-    ],
-      "2025-07-07": [
-      {title: "Click to view", image: "images/July7-July13.jpg" },
-   
-    ],
-    "2025-07-14": [
-      {title: "Regional Convention", image: "images/regional.jpg" },
-   
-    ],
+
       "2025-07-27": [
       {title: "Click to view", image: "images/July21-27.jpg" },
    
     ],
+      
+
+         "2025-08-03": [
+      {title: "Click to view", image: "images/July28-Aug3.jpg" },
+   
+    ],
+
+      "2025-08-10": [
+      {title: "Click to view", image: "images/Aug4-10.jpg" },
+   
+    ],
+     
      
      
   
@@ -231,8 +228,10 @@ function formatDateToMonthDay(dateStr) {
     }
   };
 
-  generateWeeks(new Date("2025-06-30"), 2);
-   generateWeeks(new Date("2025-07-07"), 4);
+  generateWeeks(new Date("2025-07-21"),4);
+   generateWeeks(new Date("2025-07-27"),4);
+      generateWeeks(new Date("2025-08-03"), 4);
+ 
  
   scrollToCurrentWeek();
 function toggleMenu() {
