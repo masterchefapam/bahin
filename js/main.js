@@ -100,7 +100,7 @@ function formatDateToMonthDay(dateStr) {
 
       if (!added) {
         const none = document.createElement('div');
-        none.textContent = 'No events';
+        none.textContent = '-Forthcoming-';
         card.appendChild(none);
       }
 
