@@ -229,7 +229,7 @@ function formatDateToMonthDay(dateStr) {
   };
 
   generateWeeks(new Date("2025-07-21"),4);
-   generateWeeks(new Date("2025-07-27"),4);
+  
       generateWeeks(new Date("2025-08-03"), 4);
  
  
