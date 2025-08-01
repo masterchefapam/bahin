@@ -21,6 +21,10 @@
       {title: "Click to view", image: "images/Aug11-17.jpg" },
    
     ],
+     "2025-08-18": [
+      {title: "Click to view", image: "images/Aug18-24.jpg" },
+   
+    ],
      
      
      
