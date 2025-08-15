@@ -2,21 +2,7 @@
  
     
 
-      "2025-07-27": [
-      {title: "Click to view", image: "images/July21-27.jpg" },
    
-    ],
-      
-
-         "2025-08-03": [
-      {title: "Click to view", image: "images/July28-Aug3.jpg" },
-   
-    ],
-
-      "2025-08-10": [
-      {title: "Click to view", image: "images/Aug4-10.jpg" },
-   
-    ],
     "2025-08-17": [
       {title: "Click to view", image: "images/Aug11-17.jpg" },
    
@@ -25,6 +11,11 @@
       {title: "Click to view", image: "images/Aug18-24.jpg" },
    
     ],
+     "2025-08-25": [
+      {title: "Click to view", image: "images/visit.jpg" },
+   
+    ],
+     
      
      
      
@@ -237,9 +228,9 @@ function formatDateToMonthDay(dateStr) {
     }
   };
 
-  generateWeeks(new Date("2025-07-21"),3);
+
   
-      generateWeeks(new Date("2025-08-03"), 4);
+      generateWeeks(new Date("2025-08-10"), 4);
  
  
   scrollToCurrentWeek();
