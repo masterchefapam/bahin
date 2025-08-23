@@ -15,6 +15,10 @@
       {title: "Click to view", image: "images/visit.jpg" },
    
     ],
+     "2025-09-01": [
+      {title: "Click to view", image: "images/Sep1-7.jpg" },
+   
+    ],
      
      
      
@@ -24,12 +28,7 @@
     
   };
 
-  const regional ={
-    "Regional Convention Week": [
-      {title: "Regional Convention",image: "images/regional.png" },
-   
-    ]
-  }
+
 
   const todayStr = new Date().toISOString().split('T')[0];
 
@@ -230,7 +229,8 @@ function formatDateToMonthDay(dateStr) {
 
 
   
-      generateWeeks(new Date("2025-08-10"), 4);
+      generateWeeks(new Date("2025-08-17"), 3);
+      generateWeeks(new Date("2025-09-01"), 2);
  
  
   scrollToCurrentWeek();
