@@ -454,9 +454,6 @@
 }
 
 
-ul li:hover {
-  background-color: rgb(255, 125, 3);
-}
 
 
 
@@ -564,6 +561,60 @@ background-color:#7F55B1;
     .content {
         width: 95%;
     }
+  }
+
+
+  .actionBox {
+    list-style-type: none;
+
+  }
+
+  h4 {
+    font-size: 12px;
+  }
+  .calltoAction{
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius:10px;
+ 
+    color: white;
+  }
+
+  .actionBox li {
+    margin-bottom: 10px;
+  }
+
+.mybutton{
+    padding:10px;
+    background: linear-gradient(45deg, #1d134a, #1d0541);
+  color: white;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  width: 50%;
+  }
+
+.mybutton::after {
+  content: "";
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: rgba(255,255,255,0.2);
+  transition: left 0.4s ease;
+}
+
+
+.mybutton:hover::after {
+  left: 100%;
+}
+  a {
+    color: white;
+    text-decoration: none;
   }
 
 
