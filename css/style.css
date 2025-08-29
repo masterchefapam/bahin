@@ -576,7 +576,11 @@ background-color:#7F55B1;
       position: relative;
     background: url("/images/gubat.jpg") center/cover no-repeat;
     height: 40vh;
-    border-radius: 10px;
+    max-width: 600px;
+    margin: auto;
+   
+    overflow: hidden;
+  
   }
 
   .headline {
@@ -644,18 +648,20 @@ background-color:#7F55B1;
  @media only screen and (max-width: 600px) {
 
      .headline {
-      left: 100px;
-      top: 20px;
-     }
+      position: absolute;
+      left: 110px ;
+      top:30px}
     .headline h4 {
       font-size: 18px;
       width: 90%;
+    
     }
 
     .headline p {
       font-size: 14px;
       padding-top: 1px;
        width: 100%;
+    
     }
 
     .mybutton {
