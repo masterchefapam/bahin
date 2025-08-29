@@ -498,7 +498,7 @@
   width: 60%;
   border-radius: 5px;
 }
-
+ 
 .tues {
   background-color: #FFDCDC;
   padding: 5px;
@@ -578,7 +578,7 @@ background-color:#7F55B1;
     height: 40vh;
     max-width: 600px;
     margin: auto;
-   
+    border-radius: 10px;
     overflow: hidden;
   
   }
