@@ -8,14 +8,7 @@
 
 
 
-    "2025-09-08": [
-      {title: "Click to view", image: "images/Sept8-14.jpg" },
-   
-    ],
-      "2025-09-15": [
-      {title: "Click to view", image: "images/Sept15-21.jpg" },
-   
-    ],
+
       
       "2025-09-22": [
       {title: "Click to view", image: "images/Sep22-28.jpg" },
@@ -30,6 +23,11 @@
       {title: "Click to view", image: "images/Oct6-12.jpg" },
    
     ],
+         "2025-10-13": [
+      {title: "Click to view", image: "images/Oct-13-19.jpg" },
+   
+    ],
+     
      
      
      
@@ -242,7 +240,7 @@ function formatDateToMonthDay(dateStr) {
       generateWeeks(new Date("2025-09-7"), 4);
   
      
-      generateWeeks(new Date("2025-09-29"), 3);
+      generateWeeks(new Date("2025-09-29"), 4);
  
  
   scrollToCurrentWeek();
