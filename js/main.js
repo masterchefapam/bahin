@@ -237,7 +237,7 @@ function formatDateToMonthDay(dateStr) {
     }
   };
 
-      generateWeeks(new Date("2025-09-7"), 4);
+      generateWeeks(new Date("2025-09-7"), 1);
   
      
       generateWeeks(new Date("2025-09-29"), 4);
