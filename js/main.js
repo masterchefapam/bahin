@@ -27,6 +27,10 @@
       {title: "Click to view", image: "images/Oct-13-19.jpg" },
    
     ],
+         "2025-10-20": [
+      {title: "Click to view", image: "images/Oct20-26.jpg" },
+   
+    ],
      
      
      
@@ -237,10 +241,10 @@ function formatDateToMonthDay(dateStr) {
     }
   };
 
-      generateWeeks(new Date("2025-09-7"), 1);
+      generateWeeks(new Date("2025-09-30"), 1);
   
      
-      generateWeeks(new Date("2025-09-29"), 4);
+      generateWeeks(new Date("2025-10-5"), 4);
  
  
   scrollToCurrentWeek();
