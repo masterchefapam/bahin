@@ -249,7 +249,7 @@ function formatDateToMonthDay(dateStr) {
  
   scrollToCurrentWeek();
 function toggleMenu() {
-  document.getElementById('mobileMenu').classList.toggle('active');
+  document.getElementById('mobileMenu').classList.toggle('actives');
   document.querySelector('.overlay').classList.toggle('active');
 }
 
