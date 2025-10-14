@@ -3,6 +3,7 @@
     padding: 0px;
   }
   
+
   
   body {
       font-family: Arial, sans-serif;
@@ -14,17 +15,18 @@
       background-color: rgb(4, 4, 57);
         padding: 0px;
        margin: 0px;
-
+       background:none;
        background-color: var(--light);
             color: var(--secondary);
             overflow-x: hidden;
-            background-image: url('/images/raylights.jpg');
             background-attachment: fixed;
             background-size: cover;
             background-position: center;
     }
 
     body::before {
+      transform: translateZ(0);
+  will-change: transform;
   content: '';
   position: fixed;
   inset: 0;

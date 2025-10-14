@@ -1,55 +1,29 @@
- const events = {
- 
-    
+// ---- SAFARI-SAFE VERSION ----
 
-   
-  
+// Events data
+const events = {
+  "2025-09-22": [{ title: "Click to view", image: "images/Sep22-28.jpg" }],
+  "2025-09-29": [{ title: "Click to view", image: "images/Sept29-Oct5.jpg" }],
+  "2025-10-06": [{ title: "Click to view", image: "images/Oct6-12.jpg" }],
+  "2025-10-13": [{ title: "Click to view", image: "images/Oct-13-19.jpg" }],
+  "2025-10-20": [{ title: "Click to view", image: "images/Oct20-26.jpg" }],
+};
 
+// --- SAFARI SAFE DATE HELPERS ---
+function safeDate(str) {
+  const [y, m, d] = str.split('-').map(Number);
+  return new Date(y, m - 1, d); // avoids Safari UTC bug
+}
 
+const today = new Date();
+// Local YYYY-MM-DD instead of UTC ISO
+const todayStr = today.toLocaleDateString('en-CA');
 
-
-
-      
-      "2025-09-22": [
-      {title: "Click to view", image: "images/Sep22-28.jpg" },
-   
-    ],
-
-     "2025-09-29": [
-      {title: "Click to view", image: "images/Sept29-Oct5.jpg" },
-   
-    ],
-      "2025-10-06": [
-      {title: "Click to view", image: "images/Oct6-12.jpg" },
-   
-    ],
-         "2025-10-13": [
-      {title: "Click to view", image: "images/Oct-13-19.jpg" },
-   
-    ],
-         "2025-10-20": [
-      {title: "Click to view", image: "images/Oct20-26.jpg" },
-   
-    ],
-     
-     
-     
-     
-     
-     
-     
-  
-    
-  };
-
-
-
-  const todayStr = new Date().toISOString().split('T')[0];
-
-  function getWeekRange(dateInput) {
+// --- DATE HELPERS ---
+function getWeekRange(dateInput) {
   const date = new Date(dateInput);
-  const day = date.getDay(); // 0 (Sun) to 6 (Sat)
-  const diffToMonday = (day === 0 ? -6 : 1 - day); // move back to Monday
+  const day = date.getDay(); // 0 (Sun) - 6 (Sat)
+  const diffToMonday = (day === 0 ? -6 : 1 - day);
   const monday = new Date(date);
   monday.setDate(date.getDate() + diffToMonday);
 
@@ -57,201 +31,148 @@
   for (let i = 0; i < 7; i++) {
     const d = new Date(monday);
     d.setDate(monday.getDate() + i);
-    dates.push(d.toISOString().split('T')[0]);
+    dates.push(d.toLocaleDateString('en-CA'));
   }
-
   return dates; // Monday to Sunday
 }
 
-
 function formatDateToMonthDay(dateStr) {
   const options = { month: 'long', day: 'numeric' };
-  const date = new Date(dateStr);
-  return date.toLocaleDateString(undefined, options); // auto-locale
+  const [y, m, d] = dateStr.split('-').map(Number);
+  const date = new Date(y, m - 1, d);
+  return date.toLocaleDateString(undefined, options);
 }
 
-  function generateWeeks(startDate, numWeeks) {
-    const container = document.getElementById('calendar');
-    for (let w = 1; w < numWeeks; w++) {
-      const weekStart = new Date(startDate);
-      weekStart.setDate(weekStart.getDate() + w * 6);
-      const weekDates = getWeekRange(weekStart);
-
-      const card = document.createElement('div');
-      card.className = 'week-card';
-      card.onclick = () => showModal(weekDates);
-
-      if (weekDates.includes(todayStr)) {
-        card.classList.add('current-week');
-      }
-
-      const weekRange = document.createElement('div');
-      weekRange.className = 'week-range';
-      weekRange.textContent = `${formatDateToMonthDay(weekDates[0])} – ${formatDateToMonthDay(weekDates[6])}`;
-
-      card.appendChild(weekRange);
-
-      let added = false;
-      weekDates.forEach(dateStr => {
-        (events[dateStr] || []).forEach(event => {
-          const eventDiv = document.createElement('div');
-          eventDiv.className = 'event';
-
-          const img = document.createElement('img');
-          img.src = event.image;
-          img.alt = event.title;
-
-          const title = document.createElement('span');
-          title.textContent = event.title;
-
-          eventDiv.appendChild(img);
-          eventDiv.appendChild(title);
-          card.appendChild(eventDiv);
-          added = true;
-        });
-      });
-
-      if (!added) {
-        const none = document.createElement('div');
-        none.textContent = '-Forthcoming-';
-        card.appendChild(none);
-      }
-
-      container.appendChild(card);
-    }
-  }
-
-    function generateRegional(startDate, numWeeks) {
-    const container = document.getElementById('calendar');
-    for (let w = 1; w < numWeeks; w++) {
-      const weekStart = new Date(startDate);
-      weekStart.setDate(weekStart.getDate() + w * 6);
-      const weekDates = getWeekRange(weekStart);
-
-      const card = document.createElement('div');
-      card.className = 'week-card';
-      card.onclick = () => showModalRegional(weekDates);
-
-      if (weekDates.includes(todayStr)) {
-        card.classList.add('current-week');
-      }
-
-      const weekRange = document.createElement('div');
-      weekRange.className = 'week-range';
-      weekRange.textContent = `${formatDateToMonthDay(weekDates[0])} – ${formatDateToMonthDay(weekDates[6])}`;
-
-      card.appendChild(weekRange);
-
-      let added = false;
-      weekDates.forEach(dateStr => {
-        (regional[dateStr] || []).forEach(event => {
-          const eventDiv = document.createElement('div');
-          eventDiv.className = 'event';
-
-          const img = document.createElement('img');
-          img.src = event.image;
-          img.alt = event.title;
-
-          const title = document.createElement('span');
-          title.textContent = event.title;
-
-          eventDiv.appendChild(img);
-          eventDiv.appendChild(title);
-          card.appendChild(eventDiv);
-          added = true;
-        });
-      });
-
-      if (!added) {
-        const none = document.createElement('div');
-        none.textContent = 'Regional Convention';
-        card.appendChild(none);
-      }
-
-      container.appendChild(card);
-    }
-  }
-
- function scrollToCurrentWeek() {
-  const current = document.querySelector('.week-card.current-week');
+// --- GENERATORS ---
+function generateWeeks(startDate, numWeeks) {
   const container = document.getElementById('calendar');
+  if (!container) return;
 
-  if (current) {
-    const cardRect = current.getBoundingClientRect();
-    const scrollLeft = current.offsetLeft - (container.offsetWidth / 2) + (cardRect.width / 2);
-    container.scrollTo({ left: scrollLeft, behavior: 'smooth' });
-  }
-}
+  for (let w = 1; w < numWeeks; w++) {
+    const weekStart = new Date(startDate);
+    weekStart.setDate(weekStart.getDate() + w * 6);
+    const weekDates = getWeekRange(weekStart);
 
+    const card = document.createElement('div');
+    card.className = 'week-card';
+    card.onclick = () => showModal(weekDates);
 
-  function showModal(weekDates) {
-    const modal = document.getElementById('eventModal');
-    const modalDate = document.getElementById('modalDate');
-    const modalEvents = document.getElementById('modalEvents');
+    if (weekDates.includes(todayStr)) {
+      card.classList.add('current-week');
+    }
 
-   modalDate.textContent = `Meeting Schedule for ${formatDateToMonthDay(weekDates[0])} – ${formatDateToMonthDay(weekDates[6])}`;
-
-    modalEvents.innerHTML = "";
+    const weekRange = document.createElement('div');
+    weekRange.className = 'week-range';
+    weekRange.textContent = `${formatDateToMonthDay(weekDates[0])} – ${formatDateToMonthDay(weekDates[6])}`;
+    card.appendChild(weekRange);
 
     let added = false;
     weekDates.forEach(dateStr => {
       (events[dateStr] || []).forEach(event => {
         const eventDiv = document.createElement('div');
-        eventDiv.className = 'modal-event';
+        eventDiv.className = 'event';
 
         const img = document.createElement('img');
         img.src = event.image;
-      
+        img.alt = event.title;
 
         const title = document.createElement('span');
-        title.textContent = `${formatDateToMonthDay(dateStr)}: ${event.title}`;
-
+        title.textContent = event.title;
 
         eventDiv.appendChild(img);
-       
-        modalEvents.appendChild(eventDiv);
+        eventDiv.appendChild(title);
+        card.appendChild(eventDiv);
         added = true;
       });
     });
 
     if (!added) {
-      modalEvents.innerHTML = '<p>No events this week.</p>';
+      const none = document.createElement('div');
+      none.textContent = '-Forthcoming-';
+      card.appendChild(none);
     }
 
-    modal.style.display = 'block';
+    container.appendChild(card);
+  }
+}
+
+// --- MODAL ---
+function showModal(weekDates) {
+  const modal = document.getElementById('eventModal');
+  const modalDate = document.getElementById('modalDate');
+  const modalEvents = document.getElementById('modalEvents');
+  if (!modal) return;
+
+  modalDate.textContent = `Meeting Schedule for ${formatDateToMonthDay(weekDates[0])} – ${formatDateToMonthDay(weekDates[6])}`;
+  modalEvents.innerHTML = "";
+
+  let added = false;
+  weekDates.forEach(dateStr => {
+    (events[dateStr] || []).forEach(event => {
+      const eventDiv = document.createElement('div');
+      eventDiv.className = 'modal-event';
+
+      const img = document.createElement('img');
+      img.src = event.image;
+
+      eventDiv.appendChild(img);
+      modalEvents.appendChild(eventDiv);
+      added = true;
+    });
+  });
+
+  if (!added) {
+    modalEvents.innerHTML = '<p>No events this week.</p>';
   }
 
+  modal.style.display = 'block';
+}
 
+function closeModal() {
+  document.getElementById('eventModal').style.display = 'none';
+}
 
+window.onclick = function (event) {
+  const modal = document.getElementById('eventModal');
+  if (event.target === modal) modal.style.display = 'none';
+};
 
-  function closeModal() {
-    document.getElementById('eventModal').style.display = 'none';
-  }
+// --- SCROLL ---
+function scrollToCurrentWeek() {
+  const current = document.querySelector('.week-card.current-week');
+  const container = document.getElementById('calendar');
+  if (!current || !container) return;
 
-  function scrollCalendar(dir) {
-    const container = document.getElementById('calendar');
-    const scrollAmount = container.querySelector('.week-card').offsetWidth * 2.5;
-    container.scrollBy({ left: scrollAmount * dir, behavior: 'smooth' });
-  }
+  const cardRect = current.getBoundingClientRect();
+  const scrollLeft = current.offsetLeft - (container.offsetWidth / 2) + (cardRect.width / 2);
 
-  window.onclick = function(event) {
-    const modal = document.getElementById('eventModal');
-    if (event.target === modal) {
-      modal.style.display = 'none';
+  // Safari smooth scroll fallback
+  setTimeout(() => {
+    container.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+  }, 100);
+}
+
+function scrollCalendar(dir) {
+  const container = document.getElementById('calendar');
+  if (!container) return;
+  requestAnimationFrame(() => {
+    const card = container.querySelector('.week-card');
+    if (card) {
+      const scrollAmount = card.offsetWidth * 2.5;
+      container.scrollBy({ left: scrollAmount * dir, behavior: 'smooth' });
     }
-  };
+  });
+}
 
-      generateWeeks(new Date("2025-09-30"), 1);
-  
-     
-      generateWeeks(new Date("2025-10-5"), 4);
- 
- 
-  scrollToCurrentWeek();
+// --- MENU ---
 function toggleMenu() {
   document.getElementById('mobileMenu').classList.toggle('actives');
   document.querySelector('.overlay').classList.toggle('active');
 }
 
-
-
+// --- INITIALIZE WHEN DOM READY ---
+window.addEventListener('DOMContentLoaded', () => {
+  generateWeeks(safeDate("2025-09-30"), 1);
+  generateWeeks(safeDate("2025-10-05"), 4);
+  scrollToCurrentWeek();
+});
