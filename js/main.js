@@ -3,10 +3,11 @@
 // Events data
 const events = {
 
-  "2025-10-06": [{ title: "Click to view", image: "images/Oct6-12.jpg" }],
+
   "2025-10-13": [{ title: "Click to view", image: "images/Oct-13-19.jpg" }],
   "2025-10-20": [{ title: "Click to view", image: "images/Oct20-26.jpg" }],
   "2025-11-02": [{ title: "Click to view", image: "images/Oct27-Nov2.jpg" }],
+  "2025-11-09": [{ title: "Click to view", image: "images/Nov3-9.jpg" }],
 };
 
 // --- SAFARI SAFE DATE HELPERS ---
@@ -173,6 +174,6 @@ function toggleMenu() {
 // --- INITIALIZE WHEN DOM READY ---
 window.addEventListener('DOMContentLoaded', () => {
   generateWeeks(safeDate("2025-10-13"), 4);
-  generateWeeks(safeDate("2025-11-02"), 0);
+  generateWeeks(safeDate("2025-11-02"), 2);
   scrollToCurrentWeek();
 });
