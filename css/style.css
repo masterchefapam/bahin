@@ -576,13 +576,15 @@ background-color:#7F55B1;
   }
   .calltoAction{
       position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
     background: url("/images/gubat.jpg") center/cover no-repeat;
     height: 40vh;
     max-width: 600px;
     margin: auto;
     border-radius: 10px;
     overflow: hidden;
-  
+   
   }
 
   .headline {
