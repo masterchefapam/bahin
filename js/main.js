@@ -178,7 +178,7 @@ function toggleMenu() {
 // --- INITIALIZE WHEN DOM READY ---
 window.addEventListener('DOMContentLoaded', () => {
  
-  generateWeeks(safeDate("2025-11-09"), 4);
+  generateWeeks(safeDate("2025-11-17"), 3);
   generateWeeks(safeDate("2025-12-01"), 3);
   scrollToCurrentWeek();
 });
