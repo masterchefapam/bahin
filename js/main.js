@@ -186,7 +186,7 @@ window.addEventListener('DOMContentLoaded', () => {
  
  
  
-   generateWeeks(safeDate("2026-01-01"), 4);
+   generateWeeks(safeDate("2026-01-12"), 3);
     generateWeeks(safeDate("2026-01-26"),2);
   scrollToCurrentWeek();
 });
