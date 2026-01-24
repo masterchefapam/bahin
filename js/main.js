@@ -14,9 +14,10 @@ const events = {
 
     
     
-      "2026-01-06": [{ title: "Click to view", image: "images/Jan5-11.jpg" }],
+      
       "2026-01-12": [{ title: "Click to view", image: "images/Jan12-18.jpg" }],
        "2026-01-19": [{ title: "Click to view", image: "images/Jan19-25.jpg" }],
+        "2026-01-26": [{ title: "Click to view", image: "images/Jan26-Feb3.jpg" }],
 };
 
 // --- SAFARI SAFE DATE HELPERS ---
@@ -186,5 +187,6 @@ window.addEventListener('DOMContentLoaded', () => {
  
  
    generateWeeks(safeDate("2026-01-01"), 4);
+    generateWeeks(safeDate("2026-01-26"),2);
   scrollToCurrentWeek();
 });
