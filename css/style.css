@@ -609,7 +609,7 @@ background-color:#7F55B1;
     font-size: 25px;
     color:rgb(255, 255, 255);
     width: 88%;
-    padding: 40px 40px 20px 40px;
+    padding: 5cqw 40px 20px 40px;
   }
 
   .headline p{
@@ -638,6 +638,33 @@ background-color:#7F55B1;
     margin-bottom: 10px;
     color: black;
   }
+
+    .servers {
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    width:auto;
+    border-radius: 5px;   
+    height:auto;
+    display: flex;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+      transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .servers a {
+    color:rgb(81, 48, 48);
+  }
+
+  .servers:hover {
+    background-position: right center;
+     backdrop-filter: blur(14px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  
+   
+  }
+
+
 
 .mybutton{
     padding:10px;
@@ -674,49 +701,99 @@ background-color:#7F55B1;
     color: white;
     text-decoration: none;
   }
+  .glass-button {
+     padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+    width: 100%;
+      border-radius: 5px;
+      position: absolute;
+      left: 300px;
+      top: 247px;
+      height: 10px;
+      display: flex;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  cursor: pointer;
+  }
+
+  .glass-btn:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+
+
+    .glass-button a{
+      font-size: 10px;
+      color: black;
+      font-weight: bolder;
+    }
+  
+   
 
  @media only screen and (max-width: 600px) {
 
      .headline {
-      position: absolute;
-      left: 110px ;
-      top:30px}
+     position: absolute;
+    left: -2px;
+    top: 10px;
+    width: 45%;
+  }
+
+
     .headline h4 {
       font-size: 18px;
       width: 90%;
+      position: absolute;
+      top:103px;
+      left:210px;
     
     }
 
     .headline p {
-      font-size: 14px;
-      padding-top: 1px;
-       width: 100%;
+     font-size: 12px;
+  padding: 10px;
+  width: auto;
     
     }
 
     .mybutton {
-      width: 55%;
+      width: 25%;
     }
 
     .mybutton::after {
       background: rgba(255,255,255,2.8);
     }
-  }
+
+    .glass-button {
+      width: 100%;
+      border-radius: 5px;
+      position: absolute;
+      right: 1px;
+      top: 210px;
+      height: 10px;
+      display: flex;
+    
+    }
+
+    .glass-button a{
+      font-size: 10px;
+      color: black;
+      font-weight: bolder;
+    }
+  
 
   .servers {
-    width: 600px;
-    height: auto;
-    margin: auto;
-    padding: 7px;
-      padding: 14px 30px;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  background: linear-gradient(45deg, #ff9a00, #ff3d00);
-  background-size: 200% 200%;
-  transition: background-position 0.6s ease, transform 0.3s ease;
-
-    
+     padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    width: 100%;
+    border-radius: 5px;   
+    height: 10px;
+    display: flex;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    cursor: pointer;
   }
 
   .servers:hover {
@@ -757,4 +834,4 @@ background-color:#7F55B1;
     0 8px 32px rgba(0, 0, 0, 0.15);
 }
 
-
+}
