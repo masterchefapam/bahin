@@ -11,6 +11,7 @@
   text-align: center;
   height: 70vh;
   margin: auto;
+
   }
 
   
@@ -837,11 +838,12 @@ background-color:#7F55B1;
     min-width: 150px;
   }
 
-
-
+ .serverBodyWrapper {
+    width: 100%;
+ }
   .serverWrapper img{
     width: auto;
-  max-width: 600px;
+  max-width: 390px;
   display: flex;
   justify-content: space-between;
   }
