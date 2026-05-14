@@ -1,469 +1,865 @@
+
+
   * {
+
     margin: 0px;
+
     padding: 0px;
+
   }
-  
+
+ 
+
   .serverBodyWrapper {
+
     display: flex;
+
   justify-content: space-around;
+
   flex-direction: column;
+
   width: 600px;
+
   text-align: center;
+
   height: 70vh;
+
   margin: auto;
 
+
   }
 
-  
+
+ 
+
   body {
+
       font-family: Arial, sans-serif;
+
    
+
       display: flex;
+
         justify-content: center;
+
         flex-direction: column;
+
         align-items: center;
+
       background-color: rgb(4, 4, 57);
+
         padding: 0px;
+
        margin: 0px;
+
        background:none;
+
        background-color: var(--light);
+
             color: var(--secondary);
+
             overflow-x: hidden;
+
             background-attachment: fixed;
+
             background-size: cover;
+
             background-position: center;
+
     }
 
+
     body::before {
+
       transform: translateZ(0);
+
   will-change: transform;
+
   content: '';
+
   position: fixed;
+
   inset: 0;
+
   background: url('../images/raylights.jpg') no-repeat center center/cover;
+
   filter: blur(5px);
+
   z-index: -1;
+
 }
 
 
+
   .content {
+
    max-width: 800px;
+
   margin: auto;
+
   }
+
  #calendar {
+
   padding:20px;
+
  }
+
  .header {
+
   display: flex;
+
   justify-content: center;
+
   align-items: center;
+
   background-color: rgb(6, 50, 116);
+
   width: 100%;
+
   margin-bottom: 33px;
+
   position: relative;
+
  }
+
 
 
 
  .logo {
+
     width: 100px;
+
     height: 100px;
+
     border-radius: 10px;
+
    
+
  }
+
 
  .home {
+
   width: 50px;
+
   display: flex;
+
   justify-content: center;
+
   align-items: center;
+
  
+
   right: 380px;
 
+
  }
+
 
  .home img {
+
   width: 70%;
+
   margin-left: 10px;
+
   background-color: rgb(90, 89, 169);
+
   border-radius: 5px;
+
   padding: 7px;
+
  
+
  }
+
 
  .home img:hover {
+
    background-color: rgb(24, 23, 86);
+
  }
 
+
     h1 {
+
       text-align: center;
+
       font-size: 1.5rem;
+
       margin-bottom: 20px;
+
       color: white;
+
       background-color: #0f1c5e;
+
       padding: 10px;
+
       border-radius: 10px;
+
      box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-        
+
+       
+
     }
+
 
     .calendar-wrapper {
+
       position: relative;
+
       max-width: 600px;
+
     }
+
 
     .scroll-btn {
+
       position: absolute;
+
       top: 50%;
+
       transform: translateY(-50%);
+
       background-color: #007BFF;
+
       color: white;
+
       border: none;
+
       padding: 10px;
+
       border-radius: 50%;
+
       cursor: pointer;
+
       z-index: 2;
+
     }
+
 
     .scroll-left {
+
       left: -20px;
+
     }
+
 
     .scroll-right {
+
       right: -20px;
+
     }
+
 
     .calendar-container {
+
         display: flex;
+
         flex-direction: row;
+
         overflow-x: auto;
+
         gap: 10px;
+
         padding: 10px;
+
         border: 1px solid gray;
+
         border-radius: 5px;
+
         padding: 10px;
+
     }
 
+
     .week-card {
-      min-width: 200px;
+
+      min-width: 187px;
+
       flex-shrink: 0;
+
       background: #0e4ca9;
+
       border-radius: 8px;
+
       padding: 10px;
+
       box-shadow: 20px 20px 146px 10px rgb(210, 224, 232) inset;
+
       text-align: center;
+
       cursor: pointer;
+
       background-color: #0e4ca9;
+
     }
+
 
   .week-card.current-week {
 
+
   background: #00ff37;
+
   z-index: 1;
+
   position: relative;
+
 }
 
 
+
     .week-range {
+
       font-weight: bold;
+
       margin-bottom: 10px;
+
     }
+
 
     .event {
+
       background: #23184D;
+
       color: white;
+
       padding: 5px;
+
       border-radius: 5px;
+
       margin-top: 10px;
+
       font-size: 0.9rem;
+
       display: flex;
+
       align-items: center;
+
       gap: 8px;
+
       justify-content: center;
+
       box-shadow: 20px 20px 50px 10px rgb(82, 40, 113) inset;
+
     }
+
 
     .event img {
+
       width: 30px;
+
       height: 30px;
+
       object-fit: cover;
+
       border-radius: 4px;
+
     }
+
 
     .event span{
+
         font-weight: bold;
+
     }
+
 
     .event span:hover {
+
         color: rgb(241, 230, 147);
+
         text-underline-position: below;
+
     }
 
-  
+
+ 
+
 
     button:hover{
+
       background-color: maroon;
+
     }
 
-    
+
+   
+
      .hero img {
+
       object-fit: cover;
+
       max-width: 50%;
+
      }
 
 
+
     /* Fullscreen modal */
+
     .modal {
+
       display: none;
+
       position: fixed;
+
       z-index: 100;
+
       left: 0;
+
       top: 0;
+
       width: 100%;
+
       height: 100%;
+
       overflow: auto;
+
       background: rgba(0, 0, 0, 0.8);
+
     }
+
 
     .modal-content {
+
       background-color: #25253a;
+
       margin: 0;
+
       padding: 20px;
+
       height: 100%;
+
       width: 100%;
+
       border-radius: 0;
+
       box-sizing: border-box;
+
       overflow-y: auto;
+
       position: relative;
+
       display: flex;
+
       flex-direction: column;
+
      
+
     }
 
+
     .modaldate {
+
       background-color: rgb(52, 42, 165);
+
       padding: 20px;
+
       border-radius: 20px;
+
       box-shadow: 20px 20px 50px 10px rgb(70, 69, 112) inset;
+
     }
+
 
 
 
     h3 {
+
         color: white;
+
     }
+
 
     .close {
+
       position: absolute;
+
       top: 10px;
+
       right: 20px;
+
       font-size: 2rem;
+
       cursor: pointer;
+
       color: #ff0000;
+
     }
+
 
     #modalDate {
+
       font-size: 1.5rem;
+
       margin-bottom: 20px;
+
       margin-top: 40px;
+
       text-align: center;
+
     }
+
 
     .modal-event {
+
       display: flex;
+
       align-items: center;
+
       margin: 16px 0;
+
       gap: 15px;
+
       padding: 10px;
+
       background: #25253a;
+
       border-radius: 10px;
+
       justify-content: center;
 
+
     }
 
+
     .modal-event img {
+
       width: 40%;
+
       height: 40%;
+
       object-fit: cover;
+
       border-radius: 8px;
+
     }
+
 
 
     .menu-toggle{
+
       display: none;
+
     }
+
 
     .mobile-menu {
+
       display: none;
+
     }
 
 
+
      /**/
+
      /**/
+
      /* */
+
      /**/
+
      /**/
+
      /**/
+
      /**/
+
      /**/
+
      /* */
+
      /**/
+
      /**/
+
      /**/
+
 
      @media(min-width: 601px){
+
       .content {
+
         padding: 30px;
+
       }
+
      }
-    
+
+   
+
     @media (max-width: 600px) {
 
+
            /**/
+
      /**/
+
      /* */
+
      /**/
+
      /**/
+
      /**/
+
      /**/
+
      /**/
+
      /* */
+
      /**/
+
      /**/
+
      /**/
-    
+
+   
+
       /*
+
   Menu Toggle
+
 */
 
 
+
 .home {
+
   display: none;
+
 }
+
 
 .menu-toggle {
+
   font-size: 1.5rem;
+
   cursor: pointer;
+
   margin-right: 1rem;
+
   display: block;
+
   padding-left: 10px;
+
   padding-bottom: 10px;
+
  box-shadow: 0 3px 10px rgba(159, 78, 78, 0.2);
 
+
     color: white;
+
   }
 
+
 .menu-toggle:hover{
+
   color: red;
+
 }
+
 .logo {
+
   margin: 0;
+
 }
+
 
 .mobile-menu {
+
   margin-top: 104px;
+
   display: block;
+
   position: fixed;
+
   top: 0;
+
   left: -250px;
+
   width: 250px;
+
   height: 100%;
+
   background-color: #222;
+
   color: white;
+
   transition: left 0.3s ease;
+
  z-index: 1000;
+
   padding-top: 60px;
+
 }
+
 
 .mobile-menu ul {
+
   list-style: none;
+
   padding: 0;
+
   margin: 0;
+
 }
+
 
 .mobile-menu ul li {
+
   padding: 1rem;
+
   border-bottom: 1px solid #444;
+
 }
+
 
 .mobile-menu ul li a {
+
   color: white;
+
   text-decoration: none;
+
 }
+
 
 .mobile-menu.active {
+
   left: 0;
+
 }
 
+
 .overlay {
+
   position: fixed;
+
   top: 0;
+
   left: 0;
+
   height: 100px;
+
   width: 100%;
+
   background: rgba(0,0,0,0.5);
+
   display: none;
+
   z-index: 900;
+
 }
+
 
 
 .coming {
+
   color: red !important;
+
   font-weight: bolder;
+
 }
+
 
 
 .overlay.active {
+
   display: block;
+
 }
+
 
    
+
       .scroll-btn {
+
         display: none;
+
       }
 
+
        .week-card {
+
     flex: 0 0 auto;
+
     width: 95%;
+
     max-width: 100%;
+
   }
+
 
        .modal-event img {
+
       width: 100%;
+
       height: 100%;
+
       object-fit: cover;
+
       border-radius: 8px;
+
     }
+
 
      .calendar-container {
+
     flex-direction: column;
+
     overflow-x: hidden;
+
     overflow-y: auto;
+
     max-height: 80vh; /* Optional: limit height for scrolling area */
+
   }
+
 
   h1 {
+
     font-size: 18px;
+
   }
+
     }
 
+
     @keyframes pulse {
+
   0% {
+
     box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7);
+
   }
+
   100% {
+
     box-shadow: 0 0 10px 10px rgba(255, 193, 7, 0);
+
   }
+
 }
+
 
 .calendar-container {
+
   scrollbar-width: none; /* Firefox */
+
   -ms-overflow-style: none;  /* IE/Edge */
+
 }
 
+
 .calendar-container::-webkit-scrollbar {
+
   display: none; /* Chrome, Safari, Opera */
+
 }
+
 
 
 
@@ -472,206 +868,1030 @@
 
 
 .tools img {
+
   height: 50%;
+
   width: 50%;
+
 }
+
 
 .sangyaw {
+
  width: 100%;
+
 }
+
 .sangyaw img {
 
+
   width: 90%;
+
   border-radius: 10px;
 
+
 }
+
 
 .innerContent{
+
   display: flex;
+
   justify-content: center;
+
 }
+
 
 .schedule{
+
   width: 100%;
+
   color: white;
+
   display: flex;
+
   flex-direction: column;
+
   justify-content: space-between;
+
 }
+
 
 .daily {
+
   font-size: 10px;
+
   color: rgb(0, 0, 0);
+
   text-decoration: underline;
+
   text-indent: 18px;
+
   padding: 3px;
+
   font-weight:bold;
+
   background-color: rgb(243, 243, 207);
+
   width: 60%;
+
   border-radius: 5px;
+
 }
+
  
+
 .tues {
+
   background-color: #FFDCDC;
+
   padding: 5px;
+
   border-radius: 5px;
+
   color: rgb(215, 122, 29);
+
   margin-bottom: 20px;
+
 }
+
 
 .thurs {
+
   margin-bottom: 20px;
+
    background-color: #EEEFE0;
+
   padding: 5px;
+
   border-radius: 5px;
+
   color: rgb(127, 151, 18);
+
 }
+
 
 .fri{
+
   margin-bottom: 20px;
+
    background-color: #DA6C6C;
+
   padding: 5px;
+
   border-radius: 5px;
+
   color:#EAEBD0;
+
 }
 
+
 .sat {
+
 background-color:#7F55B1;
+
   padding: 5px;
+
   border-radius: 5px;
+
   color:#F49BAB;
+
    margin-bottom: 20px;
+
 }
+
 
 
 
 .sunAM {
+
    margin-bottom: 20px;
+
   background-color:#FBF3B9;
+
   padding: 5px;
+
   border-radius: 5px;
+
   color:#766760;
+
 }
+
 
 .sunPM {
+
    background-color:#FADA7A;
+
   padding: 5px;
+
   border-radius: 5px;
+
   color:#F0A04B;
+
    margin-bottom: 20px;
+
 }
+
 
 .white {
+
   background-color: white;
+
 }
+
    
+
   @media (max-width: 600px){
+
     .sangyaw {
+
       display: none;
+
     }
 
+
     .content {
+
         width: 95%;
+
     }
+
   }
+
 
 
   .actionBox {
+
     list-style-type: none;
 
+
   }
+
 
   h4 {
+
     font-size: 12px;
+
   }
+
   .calltoAction{
+
       position: relative;
+
     background-repeat: no-repeat;
+
     background-size: contain;
+
     background: url("../images/feb2026.jpeg") center / cover no-repeat;
+
     height: 40vh;
+
     max-width: 600px;
+
     margin: auto;
+
     border-radius: 10px;
+
     overflow: hidden;
+
    
+
   }
 
 
-  
+
+ 
+
 
   .headline {
+
     position: absolute;
+
     right: 250px;
+
  
+
   }
+
 
   .headline h4{
+
     font-size: 25px;
+
     color:rgb(255, 255, 255);
+
     width: 88%;
+
     padding: 5cqw 40px 20px 40px;
+
   }
+
 
   .headline p{
+
   width: 95%;
+
   font-size: 15px;
+
   color: rgb(255, 255, 255);
+
   padding: 12px;
+
   text-align: start;
+
   border-radius: 5px;
+
   display: flex;
+
   justify-content: flex-start;
+
  
 
+
   }
+
 
   .glass-dark {
+
     margin: 10px;
+
   background: rgba(0, 0, 0, 0.35);
+
   backdrop-filter: blur(12px);
+
   -webkit-backdrop-filter: blur(12px);
+
   border-radius: 20px;
+
   border: 1px solid rgba(255, 255, 255, 0.15);
+
 }
 
+
   .actionBox li {
+
     margin-bottom: 10px;
+
     color: black;
+
   }
+
 
     .servers {
+
     padding: 10px;
+
     background: rgba(255, 255, 255, 0.2);
+
     backdrop-filter: blur(8px);
+
     width:auto;
-    border-radius: 5px;   
+
+    border-radius: 5px;  
+
     height:auto;
+
     display: flex;
+
     border: 1px solid rgba(255, 255, 255, 0.3);
+
       transition: all 0.3s ease;
+
     cursor: pointer;
+
   }
+
 
   .servers a {
+
     color:rgb(81, 48, 48);
+
   }
 
+
   .servers:hover {
+
     background-position: right center;
+
      backdrop-filter: blur(14px);
+
   box-shadow: 0 20px 40px rgba(0,0,0,0.25);
-  
+
+ 
+
    
+
   }
+
 
 
 
 .mybutton{
+
     padding:10px;
+
     background: linear-gradient(45deg, #1d134a, #1d0541);
+
   color: white;
+
   padding: 12px 28px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-size: 16px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  transition: all 0.4s ease;
+
+  width: 40%;
+
+  margin-left: 40px;
+
+  margin-top: 10px;
+
+  }
+
+
+.mybutton::after {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0; left: -100%;
+
+  width: 100%; height: 100%;
+
+
+  background: rgba(255,255,255,0.2);
+
+  transition: left 0.4s ease;
+
+}
+
+
+
+.mybutton:hover::after {
+
+  left: 100%;
+
+}
+
+  a {
+
+    color: white;
+
+    text-decoration: none;
+
+  }
+
+  .glass-button {
+
+     padding: 12px 24px;
+
+  background: rgba(255, 255, 255, 0.2);
+
+  backdrop-filter: blur(8px);
+
+    width: 100%;
+
+      border-radius: 5px;
+
+      position: absolute;
+
+      left: 300px;
+
+      top: 247px;
+
+      height: 10px;
+
+      display: flex;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  color: white;
+
+  cursor: pointer;
+
+  }
+
+
+  .glass-btn:hover {
+
+  background: rgba(255, 255, 255, 0.35);
+
+}
+
+
+
+
+    .glass-button a{
+
+      font-size: 10px;
+
+      color: black;
+
+      font-weight: bolder;
+
+    }
+
+ 
+
+   .close {
+
+     color:maroon;
+
+    padding: 10px;
+
+    background: rgba(255, 255, 255, 0.2);
+
+    backdrop-filter: blur(8px);
+
+    width:auto;
+
+    border-radius: 5px;  
+
+    height:auto;
+
+    display: flex;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+      transition: all 0.3s ease;
+
+    cursor: pointer;}
+
+ 
+
+
+
+  .close:hover {
+
+    background-position: right center;
+
+     backdrop-filter: blur(14px);
+
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+
+ 
+
+   
+
+  }
+
+
+ @media only screen and (max-width: 600px) {
+
+
+     .headline {
+
+     position: absolute;
+
+    left: -2px;
+
+    top: 10px;
+
+    width: 45%;
+
+  }
+
+
+
+    .headline h4 {
+
+      font-size: 18px;
+
+      width: 90%;
+
+      position: absolute;
+
+      top:103px;
+
+      left:210px;
+
+   
+
+    }
+
+
+    .headline p {
+
+     font-size: 12px;
+
+  padding: 10px;
+
+  width: auto;
+
+   
+
+    }
+
+
+    .mybutton {
+
+      width: 25%;
+
+    }
+
+
+    .mybutton::after {
+
+      background: rgba(255,255,255,2.8);
+
+    }
+
+
+    .glass-button {
+
+      width: 100%;
+
+      border-radius: 5px;
+
+      position: absolute;
+
+      right: 1px;
+
+      top: 210px;
+
+      height: 10px;
+
+      display: flex;
+
+   
+
+    }
+
+
+    .glass-button a{
+
+      font-size: 10px;
+
+      color: black;
+
+      font-weight: bolder;
+
+    }
+
+ 
+
+
+    .servers {
+
+    padding: 10px;
+
+    background: rgba(255, 255, 255, 0.2);
+
+    backdrop-filter: blur(8px);
+
+    width:auto;
+
+    border-radius: 5px;  
+
+    height:auto;
+
+    display: flex;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+      transition: all 0.3s ease;
+
+    cursor: pointer;
+
+  }
+
+
+  .servers a {
+
+    color:rgb(81, 48, 48);
+
+  }
+
+
+  .servers:hover {
+
+    background-position: right center;
+
+     backdrop-filter: blur(14px);
+
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+
+ 
+
+   
+
+  }
+
+  h2{
+
+    text-align: center;
+
+    color: #fff;
+
+   
+
+    padding: 10px;
+
+    border-radius: 10px;
+
+    min-width: 150px;
+
+  }
+
+
+ .serverBodyWrapper {
+
+    width: 100%;
+
+ }
+
+  .serverWrapper img{
+
+    width: auto;
+
+  max-width: 390px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  }
+
+
+  .glass-frame {
+
+  padding: 24px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  backdrop-filter: blur(12px);
+
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  box-shadow:
+
+    0 8px 32px rgba(0, 0, 0, 0.15);
+
+}
+
+
+.close {
+
+     
+
+    padding: 10px;
+
+    background: rgba(255, 255, 255, 0.2);
+
+    backdrop-filter: blur(8px);
+
+    width:auto;
+
+    border-radius: 5px;  
+
+    height:auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+      transition: all 0.3s ease;
+
+    cursor: pointer;}
+
+ 
+
+
+
+  .close:hover {
+
+    background-position: right center;
+
+     backdrop-filter: blur(14px);
+
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+
+ 
+
+   
+
+  }
+
+}
+
+
+/* ==========================================================================
+   1. RESET & VARIABLES
+   ========================================================================== */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; /* Prevents padding from breaking widths */
+}
+
+:root {
+  --primary-blue: #0f1c5e;
+  --secondary-blue: #063274;
+  --accent-blue: #0e4ca9;
+  --light-blue-bg: #d2e0e8;
+  --text-dark: #222222;
+  --text-light: #ffffff;
+  --glass-bg: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 20px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================================================
+   2. BODY & WRAPPERS
+   ========================================================================== */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: var(--secondary, #333);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Performance-optimized background blur */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: url('../images/raylights.jpg') no-repeat center center/cover;
+  filter: blur(5px);
+  transform: translateZ(0);
+  will-change: transform;
+  z-index: -1;
+}
+
+.content {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  padding: 15px;
+}
+
+.serverBodyWrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  height: 70vh;
+  margin: auto;
+}
+
+/* ==========================================================================
+   3. HEADER & NAVIGATION
+   ========================================================================== */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-blue);
+  width: 100%;
+  margin-bottom: 33px;
+  position: relative;
+  padding: 10px 0;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+}
+
+.home {
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 20px; /* Kept clean relative to header right edge */
+}
+
+.home img {
+  width: 70%;
+  background-color: rgb(90, 89, 169);
+  border-radius: 5px;
+  padding: 7px;
+  transition: background-color 0.3s ease;
+}
+
+.home img:hover {
+  background-color: rgb(24, 23, 86);
+}
+
+/* ==========================================================================
+   4. TYPOGRAPHY & HEADINGS
+   ========================================================================== */
+h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var(--text-light);
+  background-color: var(--primary-blue);
+  padding: 12px 20px;
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+}
+
+h2 {
+  text-align: center;
+  color: var(--text-light);
+  padding: 10px;
+  border-radius: 10px;
+  min-width: 150px;
+}
+
+h4 {
+  font-size: 12px;
+}
+
+a {
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   5. CALENDAR & WEEK CARDS
+   ========================================================================== */
+#calendar {
+  padding: 20px;
+}
+
+.calendar-wrapper {
+  position: relative;
+  max-width: 600px;
+  width: 100%;
+}
+
+.calendar-container {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 15px;
+  border: 2px solid white;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.calendar-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.week-card {
+  min-width: 187px;
+  flex-shrink: 0;
+  background: #bbd1e8;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.15);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 2px solid white;
+}
+
+.week-card:hover {
+  transform: translateY(-2px);
+}
+
+.week-card.current-week {
+  background: #98c9cd;
+  color: #000000;
+  z-index: 1;
+  position: relative;
+  font-weight: bold;
+}
+
+.week-range {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* ==========================================================================
+   6. EVENTS & LISTS
+   ========================================================================== */
+.event {
+  background: #23184D;
+  color: var(--text-light);
+  padding: 8px;
+  border-radius: 6px;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  box-shadow: inset 0 0 15px rgba(82, 40, 113, 0.6);
+}
+
+.event img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.event span {
+  font-weight: bold;
+}
+
+.event span:hover {
+  color: rgb(241, 230, 147);
+}
+
+/* ==========================================================================
+   7. BUTTONS & INTERACTIVE ELEMENTS
+   ========================================================================== */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #007BFF;
+  color: var(--text-light);
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: var(--shadow-md);
+}
+
+.scroll-left { left: -20px; }
+.scroll-right { right: -20px; }
+
+button:hover {
+  background-color: maroon;
+}
+
+.mybutton {
+  padding: 12px 28px;
+  background: linear-gradient(45deg, #1d134a, #1d0541);
+  color: var(--text-light);
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -682,206 +1902,470 @@ background-color:#7F55B1;
   width: 40%;
   margin-left: 40px;
   margin-top: 10px;
-  }
+  display: inline-block;
+  text-align: center;
+}
 
 .mybutton::after {
   content: "";
   position: absolute;
   top: 0; left: -100%;
   width: 100%; height: 100%;
-
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
   transition: left 0.4s ease;
 }
-
 
 .mybutton:hover::after {
   left: 100%;
 }
-  a {
-    color: white;
-    text-decoration: none;
-  }
-  .glass-button {
-     padding: 12px 24px;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(8px);
-    width: 100%;
-      border-radius: 5px;
-      position: absolute;
-      left: 300px;
-      top: 247px;
-      height: 10px;
-      display: flex;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: white;
-  cursor: pointer;
-  }
 
-  .glass-btn:hover {
+/* ==========================================================================
+   8. HERO / CALL TO ACTION (THE ADS PANEL)
+   ========================================================================== */
+.hero img {
+  object-fit: cover;
+  max-width: 50%;
+}
+
+.calltoAction {
+  position: relative;
+  background: url("../images/feb2026.jpeg") center / cover no-repeat;
+  height: 40vh;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.headline {
+  position: absolute;
+  right: 250px;
+}
+
+.headline h4 {
+  font-size: 25px;
+  color: var(--text-light);
+  width: 88%;
+  padding: 5cqw 40px 20px 40px;
+}
+
+.headline p {
+  width: 95%;
+  font-size: 15px;
+  color: var(--text-light);
+  padding: 12px;
+  text-align: start;
+  border-radius: 5px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* ==========================================================================
+   9. GLASSMORPHISM STYLES
+   ========================================================================== */
+.glass-dark {
+  margin: 10px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.glass-frame {
+  padding: 24px;
+  border-radius: 20px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.glass-button {
+  padding: 12px 24px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(8px);
+  width: 100%;
+  border-radius: 5px;
+  position: absolute;
+  left: 300px;
+  top: 247px;
+  height: 10px;
+  display: flex;
+  border: 1px solid var(--glass-border);
+  color: var(--text-light);
+  cursor: pointer;
+}
+
+.glass-button a {
+  font-size: 10px;
+  color: #000000;
+  font-weight: bolder;
+}
+
+.glass-btn:hover {
   background: rgba(255, 255, 255, 0.35);
 }
 
+/* ==========================================================================
+   10. ASSIGNMENT TABLE / SERVERS PANEL
+   ========================================================================== */
+.actionBox {
+  list-style-type: none;
+}
 
+.actionBox li {
+  margin-bottom: 10px;
+  color: #000000;
+}
 
-    .glass-button a{
-      font-size: 10px;
-      color: black;
-      font-weight: bolder;
-    }
-  
-   .close {
-     color:maroon;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(8px);
-    width:auto;
-    border-radius: 5px;   
-    height:auto;
-    display: flex;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-      transition: all 0.3s ease;
-    cursor: pointer;}
- 
+.servers {
+  padding: 12px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(8px);
+  border-radius: 6px;
+  display: flex;
+  border: 1px solid var(--glass-border);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
 
+.servers a {
+  color: rgb(81, 48, 48);
+}
 
-  .close:hover {
-    background-position: right center;
-     backdrop-filter: blur(14px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
-  
-   
+.servers:hover {
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-md);
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.serverWrapper img {
+  width: auto;
+  max-width: 390px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ==========================================================================
+   11. SCHEDULE ITEMS
+   ========================================================================== */
+.innerContent {
+  display: flex;
+  justify-content: center;
+}
+
+.schedule {
+  width: 100%;
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sangyaw {
+  width: 100%;
+}
+
+.sangyaw img {
+  width: 90%;
+  border-radius: 10px;
+}
+
+.daily {
+  font-size: 10px;
+  color: #000000;
+  text-decoration: underline;
+  text-indent: 18px;
+  padding: 3px;
+  font-weight: bold;
+  background-color: rgb(243, 243, 207);
+  width: 60%;
+  border-radius: 5px;
+}
+
+.tues { background-color: #FFDCDC; padding: 5px; border-radius: 5px; color: rgb(215, 122, 29); margin-bottom: 20px;}
+.thurs { background-color: #EEEFE0; padding: 5px; border-radius: 5px; color: rgb(127, 151, 18); margin-bottom: 20px;}
+.fri { background-color: #DA6C6C; padding: 5px; border-radius: 5px; color: #EAEBD0; margin-bottom: 20px;}
+.sat { background-color: #7F55B1; padding: 5px; border-radius: 5px; color: #F49BAB; margin-bottom: 20px;}
+.sunAM { background-color: #FBF3B9; padding: 5px; border-radius: 5px; color: #766760; margin-bottom: 20px;}
+.sunPM { background-color: #FADA7A; padding: 5px; border-radius: 5px; color: #F0A04B; margin-bottom: 20px;}
+.white { background-color: white; }
+
+/* ==========================================================================
+   12. MODAL DIALOGS
+   ========================================================================== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  background-color: #25253a;
+  margin: 0;
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-y: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.modaldate {
+  background-color: rgb(52, 42, 165);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: inset 0 0 50px rgba(70, 69, 112, 0.6);
+}
+
+#modalDate {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.modal-event {
+  display: flex;
+  align-items: center;
+  margin: 16px 0;
+  gap: 15px;
+  padding: 10px;
+  background: #25253a;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.modal-event img {
+  width: 40%;
+  height: 40%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+h3 { color: var(--text-light); }
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: maroon;
+  padding: 10px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(8px);
+  width: auto;
+  border-radius: 5px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  border: 1px solid var(--glass-border);
+  transition: all 0.3s ease;
+}
+
+.close:hover {
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ==========================================================================
+   13. MENU TOGGLE & OFF-CANVAS RESPONSIVE MENU
+   ========================================================================== */
+.menu-toggle { display: none; }
+.mobile-menu { display: none; }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 900;
+}
+
+.overlay.active {
+  display: block;
+}
+
+.coming {
+  color: red !important;
+  font-weight: bolder;
+}
+
+/* ==========================================================================
+   14. RESPONSIVE MEDIA QUERIES (Desktop vs Mobile Rules Combined Cleanly)
+   ========================================================================== */
+
+/* Tablet & Up Viewport adjustments */
+@media (min-width: 601px) {
+  .content {
+    padding: 30px;
+  }
+}
+
+/* Smartphone / Mobile Screen Adjustments */
+@media (max-width: 600px) {
+  .home {
+    display: none;
   }
 
- @media only screen and (max-width: 600px) {
+  .content {
+    width: 95%;
+  }
 
-     .headline {
-     position: absolute;
+  .serverBodyWrapper {
+    width: 100%;
+  }
+
+  .menu-toggle {
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 1rem;
+    display: block;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0 3px 10px rgba(159, 78, 78, 0.2);
+    color: var(--text-light);
+  }
+
+  .menu-toggle:hover {
+    color: red;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .mobile-menu {
+    margin-top: 104px;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #222;
+    color: var(--text-light);
+    transition: left 0.3s ease;
+    z-index: 1000;
+    padding-top: 60px;
+  }
+
+  .mobile-menu ul {
+    list-style: none;
+  }
+
+  .mobile-menu ul li {
+    padding: 1rem;
+    border-bottom: 1px solid #444;
+  }
+
+  .mobile-menu ul li a {
+    color: var(--text-light);
+  }
+
+  .mobile-menu.active {
+    left: 0;
+  }
+
+  .scroll-btn {
+    display: none;
+  }
+
+  .calendar-container {
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 80vh;
+  }
+
+  .week-card {
+    flex: 0 0 auto;
+    width: 95%;
+    max-width: 100%;
+  }
+
+  .modal-event img {
+    width: 100%;
+    height: 100%;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  .sangyaw {
+    display: none;
+  }
+
+  /* Headline & Action Area Adjustments for small frames */
+  .headline {
+    position: absolute;
     left: -2px;
     top: 10px;
     width: 45%;
   }
 
+  .headline h4 {
+    font-size: 18px;
+    width: 90%;
+    position: absolute;
+    top: 103px;
+    left: 210px;
+  }
 
-    .headline h4 {
-      font-size: 18px;
-      width: 90%;
-      position: absolute;
-      top:103px;
-      left:210px;
-    
-    }
-
-    .headline p {
-     font-size: 12px;
-  padding: 10px;
-  width: auto;
-    
-    }
-
-    .mybutton {
-      width: 25%;
-    }
-
-    .mybutton::after {
-      background: rgba(255,255,255,2.8);
-    }
-
-    .glass-button {
-      width: 100%;
-      border-radius: 5px;
-      position: absolute;
-      right: 1px;
-      top: 210px;
-      height: 10px;
-      display: flex;
-    
-    }
-
-    .glass-button a{
-      font-size: 10px;
-      color: black;
-      font-weight: bolder;
-    }
-  
-
-    .servers {
+  .headline p {
+    font-size: 12px;
     padding: 10px;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(8px);
-    width:auto;
-    border-radius: 5px;   
-    height:auto;
-    display: flex;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-      transition: all 0.3s ease;
-    cursor: pointer;
-  }
-
-  .servers a {
-    color:rgb(81, 48, 48);
-  }
-
-  .servers:hover {
-    background-position: right center;
-     backdrop-filter: blur(14px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
-  
-   
-  }
-  h2{
-    text-align: center;
-    color: #fff;
-   
-    padding: 10px;
-    border-radius: 10px;
-    min-width: 150px;
-  }
-
- .serverBodyWrapper {
-    width: 100%;
- }
-  .serverWrapper img{
     width: auto;
-  max-width: 390px;
-  display: flex;
-  justify-content: space-between;
   }
 
-  .glass-frame {
-  padding: 24px;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.15);
-}
+  .mybutton {
+    width: 25%;
+  }
 
-.close {
-     
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(8px);
-    width:auto;
-    border-radius: 5px;   
-    height:auto;
+  .mybutton::after {
+    background: rgba(255, 255, 255, 2.8);
+  }
+
+  .glass-button {
+    width: 100%;
+    position: absolute;
+    right: 1px;
+    top: 210px;
+    height: 10px;
     display: flex;
-    justify-content: center;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-      transition: all 0.3s ease;
-    cursor: pointer;}
- 
+  }
 
-
-  .close:hover {
-    background-position: right center;
-     backdrop-filter: blur(14px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
-  
-   
+  .glass-button a {
+    font-size: 10px;
   }
 }
 
+/* ==========================================================================
+   15. ANIMATIONS
+   ========================================================================== */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 10px 10px rgba(255, 193, 7, 0);
+  }
+}
 
