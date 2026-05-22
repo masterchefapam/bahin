@@ -1871,7 +1871,7 @@ a {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #007BFF;
+  background-color: #1F1B37;
   color: var(--text-light);
   border: none;
   padding: 10px;
