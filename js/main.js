@@ -26,6 +26,7 @@ const events = {
                "2026-05-11": [{ title: "Click to view", image: "images/may11-17.jpg"}],
                 "2026-05-18": [{ title: "Click to view", image: "images/may18-24.jpg"}],
                  "2026-05-25": [{ title: "Click to view", image: "images/May25-31.jpg"}],
+                  "2026-06-07": [{ title: "Click to view", image: "images/June1-7.jpg"}],
          
 };
 
