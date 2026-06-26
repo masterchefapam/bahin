@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Material Name</th>
+                 <th>Warehouse</th>
+                  <th>Quantity</th>
+            </tr>
+        </thead>
+   
+    {{
+(() => {
+  const names = $json["MATERIAL NAME"];
+  const warehouses = $json["WAREHOUSE"];
+  const quantities = $json["QUANTITY"];
+
+  return names.map((name, index) => `
+    <tr>
+      <td style="padding:8px;border:1px solid #ddd;">${name}</td>
+      <td style="padding:8px;border:1px solid #ddd;">${warehouses[index]}</td>
+      <td style="padding:8px;border:1px solid #ddd;">${quantities[index]}</td>
+    </tr>
+  `).join('');
+})()
+}}
+ </table>
+</body>
+</html>
