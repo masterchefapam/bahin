@@ -1929,8 +1929,8 @@ button:hover {
 
 .calltoAction {
   position: relative;
-  background: url("../images/feb2026.jpeg") center / cover no-repeat;
-  height: 40vh;
+  background: url("../images/RC.jpg") center / cover no-repeat;
+  height: 65vh;
   width: 100%;
   max-width: 600px;
   margin: 20px auto;
@@ -2354,6 +2354,10 @@ h3 { color: var(--text-light); }
 
   .glass-button a {
     font-size: 10px;
+  }
+
+  .calltoAction {
+     background: url("../images/RC2.jpg") center / cover no-repeat;
   }
 }
 
