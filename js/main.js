@@ -1,33 +1,18 @@
 // ---- SAFARI-SAFE VERSION ----
 
 // Events data
-const events = {
-
-
-  
- 
-
- 
-   
-   
-  
-
-    
-    
-    
-      
-        
-         
+const events = {  
        
 
            
      
           
-                   "2026-06-21": [{ title: "Click to view", image: "images/June15-21.jpg"}],
-                    "2026-06-28": [{ title: "Click to view", image: "images/Jun22-28.jpg"}],
-                    "2026-07-05": [{ title: "Click to view", image: "images/June29-July5.jpg"}],
+                
+               
                      "2026-07-12": [{ title: "Click to view", image: "images/RC.jpg"}],
                       "2026-07-19": [{ title: "Click to view", image: "images/July13-19.jpg"}],
+                        "2026-07-26": [{ title: "Click to view", image: "images/July20-26.jpg"}],
+                      
          
 };
 
@@ -199,8 +184,8 @@ window.addEventListener('DOMContentLoaded', () => {
  
 
    
-     generateWeeks(safeDate("2026-06-21"),2);
-     generateWeeks(safeDate("2026-07-01"),3);
+   
+     generateWeeks(safeDate("2026-07-05"),4);
   
    
     

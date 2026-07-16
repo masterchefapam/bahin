@@ -1746,7 +1746,7 @@ body::before {
 h1 {
   text-align: center;
   font-size: 1.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 2px;
   color: var(--text-light);
   background-color: var(--primary-blue);
   padding: 12px 20px;
@@ -1929,7 +1929,7 @@ button:hover {
 
 .calltoAction {
   position: relative;
-  background: url("../images/RC.jpg") center / cover no-repeat;
+  background: url("../images/war.jpg") center / cover no-repeat;
   height: 65vh;
   width: 100%;
   max-width: 600px;
@@ -1941,7 +1941,7 @@ button:hover {
 
 .headline {
   position: absolute;
-  right: 250px;
+  right: 10px;
 }
 
 .headline h4 {
@@ -1955,7 +1955,7 @@ button:hover {
   width: 95%;
   font-size: 15px;
   color: var(--text-light);
-  padding: 12px;
+  padding: 5px;
   text-align: start;
   border-radius: 5px;
   display: flex;
@@ -2357,7 +2357,7 @@ h3 { color: var(--text-light); }
   }
 
   .calltoAction {
-     background: url("../images/RC2.jpg") center / cover no-repeat;
+     background: url("../images/war.jpg") center / cover no-repeat;
   }
 }
 
