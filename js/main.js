@@ -182,7 +182,7 @@ window.addEventListener('DOMContentLoaded', () => {
  
  
 
-     generateWeeks(safeDate("2026-08-16"),6);
+     generateWeeks(safeDate("2026-08-16"),5);
    
     
   
