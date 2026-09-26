@@ -6,12 +6,13 @@ const events = {
                        
                         
                        
-                             "2026-08-23": [{ title: "Click to view", image: "images/aug17-23.png"}],
-                             "2026-08-30": [{ title: "Click to view", image: "images/aug24-30.png"}],
-                              "2026-09-01": [{ title: "Click to view", image: "images/Aug31-Sept7.jpg"}],
+                     
+                      
+                           
                                 "2026-09-08": [{ title: "Click to view", image: "images/Sept7-13.png"}],
-                                 "2026-09-15": [{ title: "Click to view", image: "images/sept14-20.jpg"}],
-                                  "2026-09-22": [{ title: "Click to view", image: "images/sept21-27.jpg"}],
+                                 "2026-09-14": [{ title: "Click to view", image: "images/sept14-20.jpg"}],
+                                  "2026-09-21": [{ title: "Click to view", image: "images/sept21-27.jpg"}],
+                                   "2026-09-28": [{ title: "Click to view", image: "images/sept27oct4.jpg"}],
                           
                       
          
@@ -184,7 +185,7 @@ window.addEventListener('DOMContentLoaded', () => {
  
  
 
-     generateWeeks(safeDate("2026-09-01"),5);
+     generateWeeks(safeDate("2026-09-07"),5);
    
     
   
