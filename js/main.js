@@ -14,6 +14,7 @@ const events = {
                                   "2026-09-21": [{ title: "Click to view", image: "images/sept21-27.jpg"}],
                                    "2026-09-28": [{ title: "Click to view", image: "images/sept27oct4.jpg"}],
                            "2026-10-05": [{ title: "Click to view", image: "images/Oct5-11.jpg"}],
+                            "2026-10-12": [{ title: "Click to view", image: "images/Oct12-18.jpg"}],
                       
          
 };
@@ -185,7 +186,7 @@ window.addEventListener('DOMContentLoaded', () => {
  
  
 
-     generateWeeks(safeDate("2026-09-14"),5);
+     generateWeeks(safeDate("2026-09-21"),5);
    
     
   
