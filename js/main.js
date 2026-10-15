@@ -2,21 +2,11 @@
 
 // Events data
 const events = {  
-                            
-                       
-                        
-                       
-                     
-                      
-                           
-                                "2026-09-08": [{ title: "Click to view", image: "images/Sept7-13.png"}],
-                                 "2026-09-14": [{ title: "Click to view", image: "images/sept14-20.jpg"}],
-                                  "2026-09-21": [{ title: "Click to view", image: "images/sept21-27.jpg"}],
-                                   "2026-09-28": [{ title: "Click to view", image: "images/sept27oct4.jpg"}],
-                           "2026-10-05": [{ title: "Click to view", image: "images/Oct5-11.jpg"}],
-                            "2026-10-12": [{ title: "Click to view", image: "images/Oct12-18.jpg"}],
-                      
-         
+    "2026-09-21": [{ title: "Click to view", image: "images/sept21-27.jpg"}],
+    "2026-09-28": [{ title: "Click to view", image: "images/sept27oct4.jpg"}],
+    "2026-10-05": [{ title: "Click to view", image: "images/Oct5-11.jpg"}],
+    "2026-10-12": [{ title: "Click to view", image: "images/Oct12-18.jpg"}],
+    "2026-10-19": [{ title: "Click to view", image: "images/Oct19-25.jpg"}]
 };
 
 // --- SAFARI SAFE DATE HELPERS ---
@@ -58,9 +48,10 @@ function generateWeeks(startDate, numWeeks) {
   const container = document.getElementById('calendar');
   if (!container) return;
 
-  for (let w = 1; w < numWeeks; w++) {
+  // Fixed: start at 0 (so first week isn't skipped) and multiply by 7 days
+  for (let w = 0; w < numWeeks; w++) {
     const weekStart = new Date(startDate);
-    weekStart.setDate(weekStart.getDate() + w * 6);
+    weekStart.setDate(weekStart.getDate() + (w * 7));
     const weekDates = getWeekRange(weekStart);
 
     const card = document.createElement('div');
@@ -182,15 +173,6 @@ function toggleMenu() {
 
 // --- INITIALIZE WHEN DOM READY ---
 window.addEventListener('DOMContentLoaded', () => {
- 
- 
- 
-
-     generateWeeks(safeDate("2026-09-21"),5);
-   
-    
-  
-   
-    
+  generateWeeks(safeDate("2026-09-21"), 5);
   scrollToCurrentWeek();
 });
